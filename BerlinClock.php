@@ -75,6 +75,8 @@ class BerlinClock
             return "ROOO";
         } elseif ($hours == 2 || $hours == 7 || $hours == 12 || $hours == 17 || $hours == 22) {
             return "RROO";
+        } elseif ($hours == 3 || $hours == 8 || $hours == 13 || $hours == 18 || $hours == 23) {
+            return "RRRO";
         }
 
     }
