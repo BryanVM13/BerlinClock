@@ -124,9 +124,17 @@ class BerlinClock
         return array((string)$currentTime, (string)$bottomMinutes, (string)$topMinutes, (string)$bottomHours, (string) $topHours, (string) $seconds);
     }
 
-    public function displayBerlinClock()
+
+    public function displayBerlinClock() : array
     {
-        //$this->callCurrentTime();
+        $element = $this->callCurrentTime();
+        printf($element[0]."\n");
+        printf($element[5]."\n");
+        printf($element[4]."\n");
+        printf($element[3]."\n");
+        printf($element[2]."\n");
+        printf($element[1]."\n");
+        return $element;
     }
 
 

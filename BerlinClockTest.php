@@ -252,5 +252,13 @@ class BerlinClockTest extends TestCase
         self::assertRegExp("/([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})/", $actual[0]);
     }
 
+    /**
+     * test de l'affichage
+     */
+    public function test_display(){
+        $actual = $this->berlinClock->displayBerlinClock();
 
+        self::assertTrue(true, "On test l'affichage dans le console");
+
+    }
 }
