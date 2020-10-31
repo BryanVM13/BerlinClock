@@ -88,15 +88,13 @@ class BerlinClock
     public function getTopHoursColorValues(string $time)
     {
         $hours = $this->getHours($time);
-        if($hours >= 5 && $hours < 10){
+        if ($hours >= 5 && $hours < 10) {
             return "ROOO";
-        }
-        elseif($hours >= 10 && $hours < 15){
+        } elseif ($hours >= 10 && $hours < 15) {
             return "RROO";
-        }
-        elseif($hours >= 15 && $hours < 20){
+        } elseif ($hours >= 15 && $hours < 20) {
             return "RRRO";
-        } elseif($hours >= 20 && $hours < 24){
+        } elseif ($hours >= 20 && $hours < 24) {
             return "RRRR";
         } else {
             return "OOOO";
@@ -106,10 +104,29 @@ class BerlinClock
     public function getSecondesColorValues(string $time)
     {
         $secondes = $this->getSecondes($time);
-        if($secondes % 2 == 0){
+        if ($secondes % 2 == 0) {
             return "Y";
         }
         return "O";
+    }
+
+    /**
+     * @return array [currentTime, colorValues (bottomMinutes, topMinutes, bottomHours, topHours, seconds)
+     */
+    public function callCurrentTime(): array
+    {
+        $currentTime = date("H:i:s");
+        $bottomMinutes = $this->getBottomMinutesColorValues($currentTime);
+        $topMinutes = $this->getTopMinutesColorValues($currentTime);
+        $bottomHours = $this->getBottomHoursColorValues($currentTime);
+        $topHours = $this->getTopHoursColorValues($currentTime);
+        $seconds = $this->getSecondesColorValues($currentTime);
+        return array((string)$currentTime, (string)$bottomMinutes, (string)$topMinutes, (string)$bottomHours, (string) $topHours, (string) $seconds);
+    }
+
+    public function displayBerlinClock()
+    {
+        //$this->callCurrentTime();
     }
 
 

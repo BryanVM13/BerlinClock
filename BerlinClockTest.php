@@ -242,9 +242,14 @@ class BerlinClockTest extends TestCase
     }
 
     public function test_secondes_not_pair_shouldReturn_O(){
-        $actual = $this->berlinClock->getSecondesColorValues("00:00:9");
+        $actual = $this->berlinClock->getSecondesColorValues("00:00:09");
 
         self::assertEquals("O", $actual);
+    }
+    public function test_format_currentTime_isCorrect(){
+        $actual = $this->berlinClock->callCurrentTime();
+
+        self::assertRegExp("/([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})/", $actual[0]);
     }
 
 
