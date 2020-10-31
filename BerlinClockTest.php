@@ -216,5 +216,12 @@ class BerlinClockTest extends TestCase
         self::assertEquals("RROO", $actual);
     }
 
+    public function test_top_hours_lamp1_2_3_on()
+    {
+        $actual = $this->berlinClock->getTopHoursColorValues("16:00:00");
+
+        self::assertEquals("RRRO", $actual);
+    }
+
 
 }
