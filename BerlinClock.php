@@ -42,5 +42,13 @@ class BerlinClock
         else return "OOOO";
     }
 
+    public function getTopMinutesColorValues($randomTime)
+    {
+        $minutes = $this->getMinutes($randomTime);
+        if($minutes >= 5 && $minutes < 10){
+            return "YOOOOOOOOOO";
+        }
+    }
+
 
 }
