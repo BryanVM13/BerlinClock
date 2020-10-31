@@ -91,6 +91,9 @@ class BerlinClock
         if($hours >= 5 && $hours < 10){
             return "ROOO";
         }
+        elseif($hours >= 10 && $hours < 15){
+            return "RROO";
+        }
     }
 
 
