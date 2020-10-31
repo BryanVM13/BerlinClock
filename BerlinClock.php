@@ -103,5 +103,14 @@ class BerlinClock
         }
     }
 
+    public function getSecondesColorValues(string $time)
+    {
+        $secondes = $this->getSecondes($time);
+        if($secondes % 2 == 0){
+            return "Y";
+        }
+        return "O";
+    }
+
 
 }

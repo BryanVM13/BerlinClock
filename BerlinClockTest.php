@@ -235,6 +235,11 @@ class BerlinClockTest extends TestCase
 
         self::assertEquals("OOOO", $actual);
     }
+    public function test_secondes_pair_shouldReturn_Y(){
+        $actual = $this->berlinClock->getSecondesColorValues("00:00:10");
+
+        self::assertEquals("Y", $actual);
+    }
 
 
 }
