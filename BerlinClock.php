@@ -33,6 +33,9 @@ class BerlinClock
         if($minutes == 2 || $minutes == 7 || $minutes == 12 || $minutes == 17 || $minutes == 22 || $minutes == 27 || $minutes == 32 || $minutes == 37 || $minutes == 42 || $minutes == 47 || $minutes == 52 || $minutes == 57 ){
             return "YY";
         }
+        if($minutes == 3 || $minutes == 8 || $minutes == 13 || $minutes == 18 || $minutes == 23 || $minutes == 28 || $minutes == 33 || $minutes == 38 || $minutes == 43 || $minutes == 48 || $minutes == 53 || $minutes == 58 ){
+            return "YYY";
+        }
     }
 
 
