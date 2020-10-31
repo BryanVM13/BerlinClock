@@ -47,6 +47,8 @@ class BerlinClock
         $minutes = $this->getMinutes($randomTime);
         if($minutes >= 5 && $minutes < 10){
             return "YOOOOOOOOOO";
+        }elseif ($minutes >= 10 && $minutes < 15){
+            return "YYOOOOOOOOO";
         }
     }
 
