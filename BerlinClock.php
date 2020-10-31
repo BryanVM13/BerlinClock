@@ -68,5 +68,13 @@ class BerlinClock
         }
     }
 
+    public function getBottomHoursColorValues(string $time)
+    {
+        $hours = $this->getHours($time);
+        if($hours == 1){
+            return "ROOO";
+        }
+    }
+
 
 }
