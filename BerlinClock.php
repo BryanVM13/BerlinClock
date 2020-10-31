@@ -49,6 +49,8 @@ class BerlinClock
             return "YYROOOOOOOO";
         } elseif ($minutes >= 20 && $minutes < 25) {
             return "YYRYOOOOOOO";
+        } elseif ($minutes >= 25 && $minutes < 30) {
+            return "YYRYYOOOOOO";
         }
     }
 
