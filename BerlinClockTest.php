@@ -128,10 +128,11 @@ class BerlinClockTest extends TestCase
         self::assertEquals("OOOOOOOOOOO" , $actual);
     }
     public function test_bottom_hours_lamp1_on(){
-        $actual = $this->berlinClock->getBottomHoursColorValues("01:00:00");
+        $actual = $this->berlinClock->getBottomHoursColorValues("11:00:00");
 
         self::assertEquals("ROOO", $actual);
     }
+
 
 
 
