@@ -79,7 +79,7 @@ class BerlinClockTest extends TestCase
 
         self::assertEquals("YYROOOOOOOO" , $actual);
     }
-    public function test_top_minutes_lamp1_2_3_4on(){
+    public function test_top_minutes_lamp1_2_3_4_on(){
         $actual = $this->berlinClock->getTopMinutesColorValues("23:21:00");
 
         self::assertEquals("YYRYOOOOOOO" , $actual);
