@@ -27,5 +27,10 @@ class BerlinClockTest extends TestCase
 
         self::assertEquals(11, $actual);
     }
+    public function test_getSecondes_given12_shouldReturn12(){
+        $actual = $this->berlinClock->getSecondes("23:11:12");
+
+        self::assertEquals(12, $actual);
+    }
 
 }
