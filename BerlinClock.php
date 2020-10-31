@@ -3,10 +3,17 @@
 
 class BerlinClock
 {
-    public function getHours($randomTime) :int
+    public function getHours($randomTime): int
     {
-        $hours = [];
-        preg_match("/[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}/", $randomTime, $hours);
-        return (int)$hours[0];
+        $times_array = [];
+        preg_match("/([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})/", $randomTime, $times_array);
+        return (int)$times_array[1];
+    }
+
+    public function getMinutes($randomTime): int
+    {
+        $times_array = [];
+        preg_match("/([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})/", $randomTime, $times_array);
+        return (int)$times_array[2];
     }
 }
