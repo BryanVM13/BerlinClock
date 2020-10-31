@@ -98,6 +98,8 @@ class BerlinClock
             return "RRRO";
         } elseif($hours >= 20 && $hours < 24){
             return "RRRR";
+        } else {
+            return "OOOO";
         }
     }
 
