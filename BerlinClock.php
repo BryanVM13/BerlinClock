@@ -79,6 +79,8 @@ class BerlinClock
             return "RRRO";
         } elseif ($hours == 4 || $hours == 9 || $hours == 14 || $hours == 19) {
             return "RRRR";
+        } else {
+            return "OOOO";
         }
 
     }
