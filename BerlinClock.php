@@ -71,8 +71,10 @@ class BerlinClock
     public function getBottomHoursColorValues(string $time)
     {
         $hours = $this->getHours($time);
-        if($hours == 1 || $hours == 6 || $hours == 11 || $hours == 16 || $hours == 21 ){
+        if ($hours == 1 || $hours == 6 || $hours == 11 || $hours == 16 || $hours == 21) {
             return "ROOO";
+        } elseif ($hours == 2 || $hours == 7 || $hours == 12 || $hours == 17 || $hours == 22) {
+            return "RROO";
         }
 
     }
