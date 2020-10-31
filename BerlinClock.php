@@ -85,5 +85,13 @@ class BerlinClock
 
     }
 
+    public function getTopHoursColorValues(string $time)
+    {
+        $hours = $this->getHours($time);
+        if($hours >= 5 && $hours < 10){
+            return "ROOO";
+        }
+    }
+
 
 }
