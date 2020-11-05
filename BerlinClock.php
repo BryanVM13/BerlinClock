@@ -3,6 +3,9 @@
 
 class BerlinClock
 {
+    public function __construct(){
+
+    }
     public function getHours($randomTime): int
     {
         $times_array = [];
@@ -124,9 +127,9 @@ class BerlinClock
         return array((string)$currentTime, (string)$bottomMinutes, (string)$topMinutes, (string)$bottomHours, (string) $topHours, (string) $seconds);
     }
 
-    public function displayBerlinClock()
+    public function displayBerlinClock() : array
     {
-        //$this->callCurrentTime();
+
     }
 
 
