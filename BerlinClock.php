@@ -129,6 +129,14 @@ class BerlinClock
 
     public function displayBerlinClock() : array
     {
+        $element = $this->callCurrentTime();
+        printf($element[0]."\n");
+        printf($element[5]."\n");
+        printf($element[4]."\n");
+        printf($element[3]."\n");
+        printf($element[2]."\n");
+        printf($element[1]."\n");
+        return $element;
 
     }
 
